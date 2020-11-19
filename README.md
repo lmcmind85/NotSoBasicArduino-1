@@ -35,6 +35,8 @@ https://create.arduino.cc/editor/helmstk1/9e044cca-43d7-4d93-885f-e6dec5b4f769/p
 
 ### Images
 
+<img src="https://github.com/lmcmind85/NotSoBasicArduino-1/blob/main/Images/LEDBlinkRevisited.jpeg?raw=true" width="500">
+
 ### Reflection
 
 ## Hello_LCD
