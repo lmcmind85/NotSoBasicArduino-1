@@ -38,7 +38,7 @@ void loop()
 
 	}
 ```
-The first *for* statemnet creates a function that will monitor the *value* and run the following code if the *value* holds true. In this function the *value* must be  equal to zero, or less than or equal to 255. If those conditions are true the *value* will gain 5, and then the *analogWrite* will turn on the LED and it will shine as bright as the *value* states. The second *for* statment creates a function that monitors the *dash* and run the following code in the *dash* holds true. In this function the *dash* must be equal to zero, or less than the *value* divided by ten. If those conditions are true the *dash* will increase and the serial monitor will print an amont of "-" relating to the *dash*.
+The first *for* statemnet creates a function that will monitor the *value* and run the following code if the *value* holds true. In this function the *value* must be  equal to zero, and less than or equal to 255. If those conditions are true the *value* will gain 5, and then the *analogWrite* will turn on the LED and it will shine as bright as the *value* states. The second *for* statment creates a function that monitors the *dash* and run the following code in the *dash* holds true. In this function the *dash* must be equal to zero, and less than the *value* divided by ten. If those conditions are true the *dash* will increase and the serial monitor will print an amont of "-" relating to the *dash*.
 
 ### Evidence
 https://create.arduino.cc/editor/helmstk1/9e044cca-43d7-4d93-885f-e6dec5b4f769/preview
