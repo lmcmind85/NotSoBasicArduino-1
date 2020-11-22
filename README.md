@@ -13,9 +13,9 @@
 ## LED_Fade
 
 ### Description & Code
-Description goes here
 
-Here's how you make code look like code:
+The goal is to make the LED fad in and out with *analogWrite* instead of *digitalWrite* and also have the Serial Monitor print "-" to symblozize wave to reseemble the brigtness of the LED.
+
 
 ```C++
 void loop()
@@ -50,7 +50,11 @@ The first *for* statement creates a function that will monitor the *value* and r
 
 ### Reflection
 
+Using Examples in the Arduino Create is helpful to find new code and get help if your stuck.
+
 ## Finite_LED
+
+The goal is to make one LED blink 5 times, than another blink 5 times at a differnent pace.
 
 ### Description & Code
 
@@ -102,6 +106,7 @@ We have two LED's at two different pins so these are stated at the begining of t
 
 ### Reflection
 
+Creating a new variable for a number you plan to use many or manipulate in diffent line of  code times is hlepful such as *delayVar* for my delays values. [This website](https://www.arduino.cc/reference/en/language/structure/control-structure/if/) provided by Mr. Hemlstetter helps explain how to create and use *if* statements.
 
 ## Hello_LCD
 
