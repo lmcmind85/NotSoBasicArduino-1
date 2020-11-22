@@ -104,6 +104,8 @@ We have two LED's at two different pins so these are stated at the begining of t
 
 ### Images
 
+<img src="https://github.com/lmcmind85/NotSoBasicArduino-1/blob/main/Images/IMG_0737.JPG?raw=true" width="500">
+
 ### Reflection
 
 Creating a new variable for a number you plan to use many or manipulate in diffent line of  code times is hlepful such as *delayVar* for my delays values. [This website](https://www.arduino.cc/reference/en/language/structure/control-structure/if/) provided by Mr. Hemlstetter helps explain how to create and use *if* statements.
