@@ -5,7 +5,8 @@
 ## Table of Contents
 * [Table of Contents](#TableOfContents)
 * [LED_Fade](#LED_Fade)
-* [Finite LED](#LED_Fade)
+* [Finite LED](#Finite_LED)
+* [Arduino Reveiw](#Arduino_Reveiw)
 * [Hello_LCD](#Hello_LCD)
 * [FillMeInLAter](#FillMeInLAter)
 ---
@@ -54,9 +55,9 @@ Using Examples in the Arduino Create is helpful to find new code and get help if
 
 ## Finite_LED
 
-The goal is to make one LED blink 5 times, than another blink 5 times at a differnent pace.
-
 ### Description & Code
+
+The goal is to make one LED blink 5 times, than another blink 5 times at a differnent pace.
 
 ```C++
 int LED1 = 9; // first LED at pin 9
@@ -109,6 +110,69 @@ We have two LED's at two different pins so these are stated at the begining of t
 ### Reflection
 
 Creating a new variable for a number you plan to use many or manipulate in diffent line of  code times is hlepful such as *delayVar* for my delays values. [This website](https://www.arduino.cc/reference/en/language/structure/control-structure/if/) provided by Mr. Hemlstetter helps explain how to create and use *if* statements.
+
+
+## Arduino_Reveiw
+
+### Description & Code
+
+The goal is to make the LED blink, then blink faster and faster when I press the button. When I let go of the button, the blinking stops and resets the blink speed to 1 second.
+
+
+```C++
+int LED = 9;
+int buttonState = 0;
+int buttonPin = 2;
+int delayVar = 1000;
+
+void setup() {
+  pinMode(LED, OUTPUT);
+  pinMode(buttonPin, INPUT);
+  Serial.begin(9600); // 
+}
+
+void loop() {
+  buttonState = digitalRead(buttonPin);
+  Serial.print("button State: ");
+  Serial.print(buttonState);
+
+  if (buttonState == HIGH) {
+    blink(delayVar);
+    Serial.print("\t delayVar:");
+    Serial.println(delayVar);
+    if (delayVar > 100)
+      delayVar = delayVar - 100;
+  }
+  else
+  {
+    digitalWrite(LED, LOW);            // turn the LED off by making the voltage LOW
+    delayVar = 1000;
+    Serial.println("\t no blink!");
+
+  }
+}
+
+void blink(int x) {
+  digitalWrite(LED, HIGH);           // turn the LED on (HIGH is the voltage level)
+  delay(x);                       // wait for a second
+  digitalWrite(LED, LOW);            // turn the LED off by making the voltage LOW
+  delay(x);                       // wait for a second
+}
+
+```
+Talk about how the code works, here....
+
+### Evidence
+
+[The Code in Arduino Editor](https://create.arduino.cc/editor/Lmcmind85/5202c69d-d734-4fe2-a233-c312240a619a/preview)
+
+### Images
+
+<img src="https://github.com/lmcmind85/NotSoBasicArduino-1/blob/219d268cfdbcaeb6ef21d440a4870a8c328bb712/Images/Screenshot%202020-12-09%20at%204.14.57%20PM.png?raw=true" width="500">
+
+### Reflection
+
+This seemed to combine a lot of things from the prior assighmnets such as *if*/*else* statments and functions. I got stuck on this assignment due to my my *buttonPin* being set at 0. The pin 0 and 1 are used for serial communication.
 
 ## Hello_LCD
 
