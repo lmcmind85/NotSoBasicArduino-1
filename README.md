@@ -116,7 +116,7 @@ Creating a new variable for a number you plan to use many or manipulate in diffe
 
 ### Description & Code
 
-The goal is to make the LED blink, then blink faster and faster when I press the button. When I let go of the button, the blinking stops and resets the blink speed to 1 second.
+The goal is when I press the button  the LED will blink and then blink faster and faster. When I let go of the button, the blinking stops and resets the blink speed to 1 second.
 
 
 ```C++
@@ -136,7 +136,7 @@ void loop() {
   Serial.print("button State: ");
   Serial.print(buttonState);
 
-  if (buttonState == HIGH) {
+  if (buttonState == HIGH) { // when button press run code
     blink(delayVar);
     Serial.print("\t delayVar:");
     Serial.println(delayVar);
@@ -145,22 +145,22 @@ void loop() {
   }
   else
   {
-    digitalWrite(LED, LOW);            // turn the LED off by making the voltage LOW
+    digitalWrite(LED, LOW); // when button not pressed run code           
     delayVar = 1000;
     Serial.println("\t no blink!");
 
   }
 }
 
-void blink(int x) {
-  digitalWrite(LED, HIGH);           // turn the LED on (HIGH is the voltage level)
-  delay(x);                       // wait for a second
-  digitalWrite(LED, LOW);            // turn the LED off by making the voltage LOW
-  delay(x);                       // wait for a second
+void blink(int x) { // function of blinking on a off
+  digitalWrite(LED, HIGH);          
+  delay(x);                       
+  digitalWrite(LED, LOW);            
+  delay(x);                       
 }
 
 ```
-Talk about how the code works, here....
+The *if*/*else* statemnet in the loop will run the *blink* function and decrease the delay if the button is pressed. If not, it will remain off and reset delay.
 
 ### Evidence
 
@@ -172,7 +172,7 @@ Talk about how the code works, here....
 
 ### Reflection
 
-This seemed to combine a lot of things from the prior assighmnets such as *if*/*else* statments and functions. I got stuck on this assignment due to my my *buttonPin* being set at 0. The pin 0 and 1 are used for serial communication.
+This assignment seemed to combine a lot of things from the prior assignments such as *if*/*else* statments and functions. I got stuck on this assignment due to my my *buttonPin* being set at 0. The pin 0 and 1 are used for serial communication.
 
 ## Hello_LCD
 
